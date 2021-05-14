@@ -35,7 +35,7 @@ while True:
     if control == 'A':
         print(f'\n Аналитика: \n {" "}')
         for key, value in analytics.items():
-            print(f'{key[:25]:>30}: {value}')
+            print(f'{key}: {value}')
             print()
     for f in features.keys():
         feature_ = input(f'Введите поле "{f}"')
