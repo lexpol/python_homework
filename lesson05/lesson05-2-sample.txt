@@ -1,0 +1,6 @@
+string one
+string_2
+s t r i n g  t h r e e
+string 4
+string:5
+last string in this file is six

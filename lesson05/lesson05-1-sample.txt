@@ -1,0 +1,7 @@
+first line
+2 line
+string 3
+some long string numbered as 4 with decor =======================================================================================================
+next line will be spaces
+                              
+last line in this sample
