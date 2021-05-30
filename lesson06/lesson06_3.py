@@ -11,10 +11,10 @@ class Worker():
     position: str
     _income = {"wage": None, "bonus": None}
 
-    def __init__(self, name, surname, positon, _income):
+    def __init__(self, name, surname, positon, income):
         self.name = name
         self.surname = surname
-        self._income = _income
+        self._income = income
 
 class Position(Worker):
     def get_full_name(self):
