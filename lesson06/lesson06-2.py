@@ -7,19 +7,19 @@
 # Например: 20м*5000м*25кг*5см = 12500 т
 
 class Road():
-    length: int
-    width: int
+    _length: int
+    _width: int
     one_square_meter_weight: int
     thinkness: int
 
     def __init__(self, length, width, one_square_meter_weight=25, thinkness=1):
-        self.length = length
-        self.width = width
+        self._length = length
+        self._width = width
         self.one_square_meter_weight = one_square_meter_weight
         self.thinkness = thinkness
 
     def weight(self):
-        print(f"Масса асфальта = {(self.width * self.length * self.one_square_meter_weight * self.thinkness) / 1000} т")
+        print(f"Масса асфальта = {(self._width * self._length * self.one_square_meter_weight * self.thinkness) / 1000} т")
 
 def_road = Road(100, 10)
 another_road = Road(5000, 20, 25, 5)
