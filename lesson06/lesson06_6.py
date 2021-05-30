@@ -4,3 +4,29 @@
 # классов метод должен выводить уникальное сообщение. Создать экземпляры классов и проверить, что выведет описанный
 # метод для каждого экземпляра.
 
+class Stationery:
+    title: str
+
+    def draw(self):
+        print("Запуск отрисовки.")
+
+class Pen(Stationery):
+    def draw(self):
+        print("Запуск отрисовки ручки.")
+
+class Pencil(Stationery):
+    def draw(self):
+        print("Запуск отрисовки карандаша.")
+
+class Handle(Stationery):
+    def draw(self):
+        print("Запуск отрисовки маркера")
+
+some_pen = Pen()
+some_pencil = Pencil()
+some_handle = Handle()
+
+some_pen.draw()
+some_pencil.draw()
+some_handle.draw()
+
