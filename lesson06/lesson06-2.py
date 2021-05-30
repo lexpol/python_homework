@@ -24,8 +24,8 @@ class Road():
 def_road = Road(100, 10)
 another_road = Road(5000, 20, 25, 5)
 
-print(def_road.weight())
-print(another_road.weight())
+def_road.weight()
+another_road.weight()
 
 
 
