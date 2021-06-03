@@ -12,12 +12,26 @@ class Wear:
     type: str
     size: int
     height: int
+    _counter = 0
+    _instances = []
 
     def __init__(self, name: str, type: str, size: int = None, height: int = None):
         self.name = name
         self.type = type
         self.size = size
         self.height = height
+        self._instances.append(self)
+        self._id = Wear._counter + 1
+        Wear._counter += 1
+
+    def __repr__(self):
+        return f"расход ткани на {self.type} {self.name} {self.fabric_consumption}"
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        pass
 
     @property
     def fabric_consumption(self):
@@ -39,11 +53,9 @@ coat_two = Wear("Кутузов", "пальто", 54, None)
 suit_one = Wear("Тройка", "костюм", None, 180)
 suit_two = Wear("Фрак", "костюм", None, 165)
 
-wears = ["coat_one", "coat_two", "suit_one", "suit_two"]
-
-print(f"расход ткани на {coat_one.type} {coat_one.name} {coat_one.fabric_consumption}")
-print(f"расход ткани на {coat_two.type} {coat_two.name} {coat_two.fabric_consumption}")
-print(f"расход ткани на {suit_one.type} {suit_one.name} {suit_one.fabric_consumption}")
-print(f"расход ткани на {suit_two.type} {suit_two.name} {suit_two.fabric_consumption}")
-
-print(Wear)
+total = 0
+for item in Wear._instances:
+    item_str = str(item)
+    print(item_str)
+    total += float(item_str.split()[5])
+print(f"Общий расход ткани: {total}")
