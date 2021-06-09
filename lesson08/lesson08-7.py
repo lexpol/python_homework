@@ -13,7 +13,7 @@ class ComplexNumber:
 
     def __mul__(self, other):
             return (
-                    self.complex_num[0] * other.complex_num[0] - self.complex_num[1] * other.complex_num[1],
+                    self.complex_num[0] * other.complex_num[0] - self.complex_num[1] * other.complex_num[1] * -1,
                     self.complex_num[1] * other.complex_num[0] + self.complex_num[0] * other.complex_num[1]
                     )
 
