@@ -24,12 +24,6 @@ class Date:
     def to_num(cls, date):
         return cls.check_date_format(list(map(int, date.replace('-', ' ').split())))
 
-
-
-
-
-
-
 date_example = "22-01-1980"
 date_wrong = "44-55-66"
 
